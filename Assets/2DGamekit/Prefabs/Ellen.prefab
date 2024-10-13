@@ -198,6 +198,7 @@ Transform:
   - {fileID: 4971493519252120}
   - {fileID: 4168598803991272}
   - {fileID: 4530920980854552}
+  - {fileID: 5199627231169692139}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &212611162554739646
@@ -375,11 +376,11 @@ MonoBehaviour:
   MeleeAttack:
     key: 323
     controllerButton: 3
-    m_Enabled: 0
+    m_Enabled: 1
   RangedAttack:
     key: 324
     controllerButton: 10
-    m_Enabled: 0
+    m_Enabled: 1
   Jump:
     key: 32
     controllerButton: 1
@@ -414,19 +415,19 @@ MonoBehaviour:
   facingRightBulletSpawnPoint: {fileID: 4929711121330312}
   bulletPool: {fileID: 114680495344679792}
   cameraFollowTarget: {fileID: 4530920980854552}
-  maxSpeed: 7
+  maxSpeed: 10
   groundAcceleration: 100
   groundDeceleration: 100
   pushingSpeedProportion: 0.5
   airborneAccelProportion: 1
   airborneDecelProportion: 0.5
   gravity: 38
-  jumpSpeed: 16.5
+  jumpSpeed: 12
   jumpAbortSpeedReduction: 100
   hurtJumpAngle: 45
   hurtJumpSpeed: 8
   flickeringDuration: 0.05
-  meleeAttackDashSpeed: 15
+  meleeAttackDashSpeed: 50
   dashWhileAirborne: 1
   footstepAudioPlayer: {fileID: 114293955134965878}
   landingAudioPlayer: {fileID: 114437884384235768}
@@ -466,7 +467,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Gamekit2D.HealthUI, Assembly-CSharp
         m_MethodName: ChangeHitPointUI
         m_Mode: 0
         m_Arguments:
@@ -1679,7 +1680,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.394
   m_Color: {r: 1, g: 0.8862746, b: 0.76470596, a: 1}
-  m_Intensity: 1.2
+  m_Intensity: 1
   m_LightVolumeIntensity: 1.03
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -1701,7 +1702,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 5.02
+  m_PointLightOuterRadius: 55.86
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -1712,3 +1713,48 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &1871783950400198320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5199627231169692139}
+  - component: {fileID: 2932594278076644677}
+  m_Layer: 13
+  m_Name: Center
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5199627231169692139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871783950400198320}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.23, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4212235226361802}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2932594278076644677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871783950400198320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59bb6f42e39da1543942f661be57b897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagable: 1
