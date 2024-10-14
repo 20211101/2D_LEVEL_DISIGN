@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage2.unity
     guid: 45b68757ca0bdb3468ae8e7472d1c708
+  - enabled: 1
+    path: Assets/Sonminseok_2.unity
+    guid: 2429d7eee5e758544a89ef6c9f71f89a
   m_configObjects: {}
