@@ -723,6 +723,8 @@ namespace Gamekit2D
             yield return new WaitForEndOfFrame();
             yield return StartCoroutine(ScreenFader.FadeSceneIn());
             PlayerInput.Instance.GainControl();
+            //if (damageable.CurrentHealth <= 0)
+                SceneController.RestartZone();
         }
 
         public void StartFlickering()
@@ -741,9 +743,28 @@ namespace Gamekit2D
             return PlayerInput.Instance.MeleeAttack.Down;
         }
 
+        bool isCoolTime = false;
+        const float coolTime = 1;
+        float curCoolTime = 0;
+        public float MeleeCurCoolTime { get => curCoolTime; }
+        public float MeleeCoolTime { get => coolTime; }
+        public bool IsCoolTime { get => isCoolTime; }
         public void MeleeAttack()
         {
+            if (isCoolTime) return;
+            isCoolTime = true;
+            StartCoroutine(nameof(WaitMelleATKCoolTime));
             m_Animator.SetTrigger(m_HashMeleeAttackPara);
+        }
+        IEnumerator WaitMelleATKCoolTime()
+        {
+            while(curCoolTime < coolTime)
+            {
+                curCoolTime += Time.deltaTime;
+                yield return null;
+            }
+            curCoolTime = 0;
+            isCoolTime = false;
         }
 
         public void EnableMeleeAttack()
