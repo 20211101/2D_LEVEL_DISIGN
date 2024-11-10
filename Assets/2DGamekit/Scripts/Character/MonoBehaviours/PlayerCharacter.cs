@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Security.Principal;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
 
 namespace Gamekit2D
 {
@@ -717,14 +718,15 @@ namespace Gamekit2D
             PlayerInput.Instance.ReleaseControl(true);
             yield return new WaitForSeconds(1.0f); //wait one second before respawing
             yield return StartCoroutine(ScreenFader.FadeSceneOut(useCheckPoint ? ScreenFader.FadeType.Black : ScreenFader.FadeType.GameOver));
-            if(!useCheckPoint)
-                yield return new WaitForSeconds (2f);
-            Respawn(resetHealth, useCheckPoint);
-            yield return new WaitForEndOfFrame();
-            yield return StartCoroutine(ScreenFader.FadeSceneIn());
-            PlayerInput.Instance.GainControl();
+            /*yield return */StartCoroutine(ScreenFader.FadeSceneIn());
+            UnityEngine.SceneManagement.SceneManager.LoadScene(gameObject.scene.name);
+            //if(!useCheckPoint)
+            //    yield return new WaitForSeconds (2f);
+            //Respawn(resetHealth, useCheckPoint);
+            //yield return new WaitForEndOfFrame();
+            //PlayerInput.Instance.GainControl();
+            //SceneController.RestartZone();
             //if (damageable.CurrentHealth <= 0)
-                SceneController.RestartZone();
         }
 
         public void StartFlickering()

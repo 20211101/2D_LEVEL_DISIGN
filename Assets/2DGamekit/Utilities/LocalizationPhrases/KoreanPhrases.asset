@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97933d85c6acddc4bb95f77ca8cc0280, type: 3}
+  m_Name: KoreanPhrases
+  m_EditorClassIdentifier: 
+  language: Korean
+  phrases:
+  - key: INFOPOST1
+    value: "\u201CHello? Is anyone else here? Better keep moving or I\u2019ll be
+      talking to myself for the whole trip. Let\u2019s use A and D for left and right,
+      SPACE to jump and err\u2026 how about S to crouch?\u201D"
+  - key: INFOPOST2
+    value: "\u201CWeird, it feels spongy and strange underfoot. What happens if we
+      try S and SPACE at the same time?\u201D "
+  - key: INFOPOST3
+    value: "\u201CThis place just got interesting! Use K to hit and O to shoot. Let\u2019s
+      try it on this innocent looking wall.\u201D"
+  - key: GameIN_1
+    value: "\u201C\uB2F9\uC2DC\uC740 \uBCF4\uBB3C\uC744 \uCC3E\uC73C\uB7EC \uC720\uC801\uC5D0
+      \uC628 \uD0D0\uD5D8\uAC00\uC785\uB2C8\uB2E4. \uAE30\uBCF8\uC801\uC778 \uC870\uC791\uC740
+      \uC774\uC804 \uB808\uBCA8\uC5D0\uC11C \uD559\uC2B5\uD588\uB2E4\uACE0 \uAC00\uC815\uD569\uB2C8\uB2E4.\u201D"
+  - key: GameIN_2
+    value: "\u201C\uB9C8\uC6B0\uC2A4 \uC88C\uD074\uB9AD => \uD074\uB9AD \uBC29\uD5A5\uC73C\uB85C
+      \uB300\uC26C + \uACF5\uACA9\\n\uC6B0\uD074\uB9AD=>\uCD1D \uBC1C\uC0AC \uC785\uB2C8\uB2E4.\u201D"
+  - key: GameIN_3
+    value: "\u201C\uCC38\uACE0\uB85C, \uBCF4\uBB3C\uC744 \uC5BB\uACE0 \uB098\uBA74
+      \uC720\uC801\uC758 \uD568\uC815\uC774 \uBC1C\uB3D9\uB429\uB2C8\uB2E4. \\n\uADF8\uB7FC,
+      \uAC74\uC2B9\uC744 \uAE30\uC6D0\uD569\uB2C8\uB2E4!\u201D"
