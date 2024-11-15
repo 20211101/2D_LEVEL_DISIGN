@@ -559,7 +559,8 @@ namespace Gamekit2D
             {
                 m_MoveVector.y = 0f;
             }
-            m_MoveVector.y -= gravity * Time.deltaTime;
+            if(!Player.instance.isCheckDist)
+                m_MoveVector.y -= gravity * Time.deltaTime;
         }
 
         public bool CheckForJumpInput()
