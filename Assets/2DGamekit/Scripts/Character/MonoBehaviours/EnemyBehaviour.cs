@@ -50,6 +50,8 @@ namespace Gamekit2D
         [Header("Range Attack Data")]
         [Tooltip("From where the projectile are spawned")]
         public Transform shootingOrigin;
+        [Tooltip("1 : low 2 : direct")]
+        public int atkType = 1;
 
         [Header("Audio")]
         public RandomAudioPlayer shootingAudio;
@@ -384,7 +386,7 @@ namespace Gamekit2D
 
             obj.rigidbody2D.velocity = (GetProjectilVelocity(m_TargetShootPosition, shootingOrigin.transform.position));
         }
-
+        
         //This will give the velocity vector needed to give to the bullet rigidbody so it reach the given target from the origin.
         private Vector3 GetProjectilVelocity(Vector3 target, Vector3 origin)
         {
@@ -393,7 +395,8 @@ namespace Gamekit2D
             Vector3 velocity = Vector3.zero;
             Vector3 toTarget = target - origin;
 
-            float gSquared = Physics.gravity.sqrMagnitude;
+            //float gSquared = Physics.gravity.sqrMagnitude ;
+            float gSquared = Physics.gravity.sqrMagnitude * 0.5f;
             float b = projectileSpeed * projectileSpeed + Vector3.Dot(toTarget, Physics.gravity);
             float discriminant = b * b - gSquared * toTarget.sqrMagnitude;
 
@@ -423,7 +426,7 @@ namespace Gamekit2D
             float T = 0;
 
             // 0 = highest, 1 = lowest, 2 = most direct
-            int shotType = 1;
+            int shotType = atkType;
 
             switch (shotType)
             {

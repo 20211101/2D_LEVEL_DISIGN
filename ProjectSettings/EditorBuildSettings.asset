@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/2DGamekit/Scenes/Start.unity
     guid: 57df1e417250bc247976c2c0dc088efe
   - enabled: 0
@@ -47,16 +47,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/HMS/HeoMinSeokMap_4.unity
     guid: 168bd4dc6770f9746b6ba454af743162
-  - enabled: 1
+  - enabled: 0
     path: Assets/HMS/InGame_In.unity
     guid: 2c87173092ef0604590f1253a4ec1019
-  - enabled: 1
+  - enabled: 0
     path: Assets/HMS/InGame_Out.unity
     guid: a90b33d855db95248990dd29615561d8
-  - enabled: 1
+  - enabled: 0
     path: Assets/HMS/TreasureLevel_1.unity
     guid: 35f912370e3bc5d4a84b77dfe4c649ec
-  - enabled: 0
+  - enabled: 1
     path: Assets/HMS/InGame2_In.unity
     guid: bdf7ffa5b37341346bbd23456e95c726
   m_configObjects: {}

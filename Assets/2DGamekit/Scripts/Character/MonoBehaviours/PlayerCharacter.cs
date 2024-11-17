@@ -773,7 +773,7 @@ namespace Gamekit2D
         public void EnableMeleeAttack()
         {
             meleeDamager.EnableDamage();
-            meleeDamager.disableDamageAfterHit = true;
+            //meleeDamager.disableDamageAfterHit = true;
             meleeAttackAudioPlayer.PlayRandomSound();
         }
 
