@@ -6,7 +6,7 @@ public class WindSlashRenderer : MonoBehaviour
 {
     [SerializeField]
     private LineRenderer lineRenderer;
-    float moveDist = 8;
+    float moveDist = 9.3f;
     private void Awake()
     {
         lineRenderer.positionCount = 2;
