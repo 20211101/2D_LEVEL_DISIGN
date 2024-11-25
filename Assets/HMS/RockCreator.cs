@@ -11,8 +11,14 @@ public class RockCreator : MonoBehaviour
     {
         while(true)
         {
-            Instantiate(Rock, transform.position, Quaternion.identity);
+            CreateRock();
             yield return new WaitForSeconds(delay);
         }
+    }
+
+    public void CreateRock()
+    {
+            Instantiate(Rock, transform.position, Quaternion.identity);
+
     }
 }

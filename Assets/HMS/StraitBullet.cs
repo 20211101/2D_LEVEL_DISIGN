@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class StraitBullet : MonoBehaviour
 {
-    private void Start()
+    public void Setting(float lifeTime = 10)
     {
-        Destroy(gameObject, 10);
+        Destroy(gameObject, lifeTime);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
