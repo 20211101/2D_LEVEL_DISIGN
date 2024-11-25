@@ -180,6 +180,7 @@ namespace Gamekit2D
 
         void Update()
         {
+            Debug.Log(m_LastCheckpoint);
             if (PlayerInput.Instance.Pause.Down)
             {
                 if (!m_InPause)
