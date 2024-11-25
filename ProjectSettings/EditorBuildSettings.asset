@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/HMS/InGame2_In.unity
     guid: bdf7ffa5b37341346bbd23456e95c726
+  - enabled: 1
+    path: Assets/NONO.unity
+    guid: 367a68eda0e7b624fa0a370061c9c5ea
   m_configObjects: {}

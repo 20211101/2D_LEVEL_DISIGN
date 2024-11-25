@@ -17,16 +17,16 @@ public class InfinityPlatformCycle : MonoBehaviour
     public Transform left;
     public Rigidbody2D[] childT;
 
-    private void FixedUpdate()
+    private void Update()
     {
         if(useY)
         {
             for (int i = 0; i < childT.Length; i++ )
             {
                 if (dir.y == 1 && childT[i].position.y > top.position.y)
-                    childT[i].position = bottom.position;
-                else if (dir.y == -1 && childT[i].position.y < bottom.position.y)
-                    childT[i].position = top.position;
+                    childT[i].transform.position = bottom.position;
+                else if (dir.y == -1 && childT[i].transform.position.y < bottom.position.y)
+                    childT[i].transform.position = top.position;
             }
         }
         if(useX)
