@@ -726,7 +726,7 @@ namespace Gamekit2D
         {
             PlayerInput.Instance.ReleaseControl(true);
             yield return new WaitForSeconds(1.0f); //wait one second before respawing
-            yield return StartCoroutine(ScreenFader.FadeSceneOut(useCheckPoint ? ScreenFader.FadeType.Black : ScreenFader.FadeType.GameOver));
+            //yield return StartCoroutine(ScreenFader.FadeSceneOut(useCheckPoint ? ScreenFader.FadeType.Black : ScreenFader.FadeType.GameOver));
             /*yield return */StartCoroutine(ScreenFader.FadeSceneIn());
             UnityEngine.SceneManagement.SceneManager.LoadScene(gameObject.scene.name);
             //if(!useCheckPoint)
