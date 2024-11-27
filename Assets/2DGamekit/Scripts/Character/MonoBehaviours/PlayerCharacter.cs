@@ -709,6 +709,10 @@ namespace Gamekit2D
                 else
                     StartCoroutine(DieRespawnCoroutine(false, true));
             }
+            else if(damageable.CurrentHealth <= 0)
+            {
+                StartCoroutine(DieRespawnCoroutine(false, true));
+            }
         }
 
         public void OnDie()

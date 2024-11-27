@@ -19,14 +19,20 @@ public class PlayerUI : MonoBehaviour
         if (playerCharacter.IsCoolTime)
         {
             lineRenderer.endColor = new Color(1,0,0,0.1f);
-            coolTimeImg.color = Color.black;
-            coolTimeImg.fillAmount = playerCharacter.MeleeCurCoolTime / playerCharacter.MeleeCoolTime;
+            if(coolTimeImg != null)
+            {
+                coolTimeImg.color = Color.black;
+                coolTimeImg.fillAmount = playerCharacter.MeleeCurCoolTime / playerCharacter.MeleeCoolTime;
+            }
         }
         else
         {
             lineRenderer.endColor = Color.white;
-            coolTimeImg.color = Color.white;
-            coolTimeImg.fillAmount = 1;
+            if(coolTimeImg != null)
+            {
+                coolTimeImg.color = Color.white;
+                coolTimeImg.fillAmount = 1;
+            }
         }
 
     }
