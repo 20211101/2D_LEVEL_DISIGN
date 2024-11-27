@@ -6960,6 +6960,10 @@ PrefabInstance:
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1241663342956346, guid: bb0018ce3a8caa643b44f8487c34bd25, type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
     - target: {fileID: 1433494367451472, guid: bb0018ce3a8caa643b44f8487c34bd25, type: 3}
       propertyPath: m_Name
       value: Cameras
