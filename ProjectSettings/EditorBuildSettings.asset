@@ -62,7 +62,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/NONO.unity
     guid: 367a68eda0e7b624fa0a370061c9c5ea
-  - enabled: 1
+  - enabled: 0
     path: Assets/HMS/InGame3_In.unity
     guid: f4ec763a779d1f5429295b7f44eab493
+  - enabled: 1
+    path: Assets/Scenes/Stage3.unity
+    guid: 61f81d3f03d5dd443840e93b95318c4a
   m_configObjects: {}
