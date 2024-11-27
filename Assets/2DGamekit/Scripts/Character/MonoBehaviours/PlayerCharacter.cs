@@ -695,8 +695,8 @@ namespace Gamekit2D
             m_Animator.SetTrigger(m_HashHurtPara);
 
             //we only force respawn if helath > 0, otherwise both forceRespawn & Death trigger are set in the animator, messing with each other.
-            if(damageable.CurrentHealth > 0 && damager.forceRespawn)
-                m_Animator.SetTrigger(m_HashForcedRespawnPara);
+            //if(damageable.CurrentHealth > 0 && damager.forceRespawn)
+            //    m_Animator.SetTrigger(m_HashForcedRespawnPara);
 
             m_Animator.SetBool(m_HashGroundedPara, false);
             hurtAudioPlayer.PlayRandomSound();
@@ -727,13 +727,13 @@ namespace Gamekit2D
             PlayerInput.Instance.ReleaseControl(true);
             yield return new WaitForSeconds(1.0f); //wait one second before respawing
             //yield return StartCoroutine(ScreenFader.FadeSceneOut(useCheckPoint ? ScreenFader.FadeType.Black : ScreenFader.FadeType.GameOver));
-            /*yield return */StartCoroutine(ScreenFader.FadeSceneIn());
+            //yield return StartCoroutine(ScreenFader.FadeSceneIn());
+            PlayerInput.Instance.GainControl();
             UnityEngine.SceneManagement.SceneManager.LoadScene(gameObject.scene.name);
             //if(!useCheckPoint)
             //    yield return new WaitForSeconds (2f);
             //Respawn(resetHealth, useCheckPoint);
             //yield return new WaitForEndOfFrame();
-            //PlayerInput.Instance.GainControl();
             //SceneController.RestartZone();
             //if (damageable.CurrentHealth <= 0)
         }
