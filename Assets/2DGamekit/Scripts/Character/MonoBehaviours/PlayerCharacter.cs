@@ -704,7 +704,10 @@ namespace Gamekit2D
             //if the health is < 0, mean die callback will take care of respawn
             if(damager.forceRespawn && damageable.CurrentHealth > 0)
             {
-                StartCoroutine(DieRespawnCoroutine(false, true));
+                if (m_LastCheckpoint != null)
+                    Respawn(true, true);
+                else
+                    StartCoroutine(DieRespawnCoroutine(false, true));
             }
         }
 
